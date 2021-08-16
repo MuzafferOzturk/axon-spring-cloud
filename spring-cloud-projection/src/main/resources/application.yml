@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: axon-spring-cloud-test
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+    cloud:
+      stream:
+        kafka:
+          binder:
+            brokers:
+              - 127.0.0.1:9092
+          bindings:
+            spring-cloud-exchange:
+              binder: kafka
+              group: event-test
+              destination: spring-cloud-exchange
+              content-type: application/json
+        default-binder: kafka

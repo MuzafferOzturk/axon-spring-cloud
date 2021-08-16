@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "6daad33e-80ee-4948-a0f4-3c79abe205ee",
+		"name": "Axon Spring Cloud Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Command",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/command/create?userId=1&balance=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"command",
+						"create"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "balance",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposite Command",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/command/deposite?userId=1&balance=25",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"command",
+						"deposite"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "balance",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

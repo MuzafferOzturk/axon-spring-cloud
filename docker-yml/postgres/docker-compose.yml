@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: local-postgres
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+      POSTGRES_DB: event_test
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: local-pgadmin
+    image: dpage/pgadmin4:latest
+    environment:
+
+      PGADMIN_DEFAULT_EMAIL: "root@mail.com"
+      PGADMIN_DEFAULT_PASSWORD: "root"
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "6060:80"

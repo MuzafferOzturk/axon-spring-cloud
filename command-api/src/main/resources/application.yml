@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: axon-spring-cloud-test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/event_test
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+axon:
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson
+  kafka:
+    client-id: spring-cloud-axon-test
+    default-topic: spring-cloud-exchange
+    producer:
+      retries: 2
+      bootstrap-servers: 127.0.0.1:9092
+      transaction-id-prefix: event-transaction
+    properties:
+      security.protocol: PLAINTEXT
+  amqp:
+    exchange: spring-cloud-exchange
