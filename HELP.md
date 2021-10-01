@@ -1,6 +1,3 @@
-Axon Framework event listener tarafında aynı kod ile rabbitmq ve kafkayı destekleyebilmek için yapılan POC çalışmasıdır.
-
-Maven profile değiştirilerek Kafka veya RabbitMQ ile kullanılabilir.\
 ![img.png](img.png)\
 
 #RUN
